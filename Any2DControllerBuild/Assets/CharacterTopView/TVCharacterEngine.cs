@@ -5,16 +5,16 @@ using UnityEngine;
 *Copyright(c) 
 *Davide "Lautz" Lauterio
 */
-public class CharacterEngine : MonoBehaviour
+public class TVCharacterEngine : MonoBehaviour
 {
 
     Vector3 velocity;
     
     //maniglia del component responsabile del movimento
-    CharacterMotor2D motor;
+    TVCharacterMotor2D motor;
 
     //maniglia del component responsabile dell'input
-    CharacterInputSystem input;
+    TVCharacterInputSystem input;
 
     //cosa è definito come collisione
     public LayerMask collisionMask;
@@ -25,8 +25,8 @@ public class CharacterEngine : MonoBehaviour
 
     void Awake()
     {
-        motor = GetComponent<CharacterMotor2D>();
-        input = GetComponent<CharacterInputSystem>();
+        motor = GetComponent<TVCharacterMotor2D>();
+        input = GetComponent<TVCharacterInputSystem>();
     }
 
     void Update() {

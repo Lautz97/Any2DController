@@ -5,7 +5,7 @@ using UnityEngine;
 *Copyright(c) 
 *Davide "Lautz" Lauterio
 */
-public class CollisionDetection2D : MonoBehaviour {
+public class TVCollisionDetection2D : MonoBehaviour {
     //DEBUG
     [SerializeField]
     bool debug = true;

@@ -5,15 +5,15 @@ using UnityEngine;
 *Copyright(c) 
 *Davide "Lautz" Lauterio
 */
-public class CharacterMotor2D : MonoBehaviour {
+public class TVCharacterMotor2D : MonoBehaviour {
 
     //maniglia del component
-    CollisionDetection2D cd;
+    TVCollisionDetection2D cd;
 
     private void Awake()
     {
         //collegamento del component alla maniglia
-        cd = this.GetComponent<CollisionDetection2D>();
+        cd = this.GetComponent<TVCollisionDetection2D>();
     }
 
     public void Move(Vector3 velocity, LayerMask collisionMask) {

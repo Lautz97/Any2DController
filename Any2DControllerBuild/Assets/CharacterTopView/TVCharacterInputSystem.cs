@@ -5,7 +5,7 @@ using UnityEngine;
 *Copyright(c) 
 *Davide "Lautz" Lauterio
 */
-public class CharacterInputSystem : MonoBehaviour {
+public class TVCharacterInputSystem : MonoBehaviour {
 
     public Vector2 Input2DTop()
     {
