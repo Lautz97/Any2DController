@@ -5,7 +5,7 @@ using UnityEngine;
 *Copyright(c) 
 *Davide "Lautz" Lauterio
 */
-public class TVCollisionDetection2D : MonoBehaviour {
+public class TVCollisionDetection2D : MonoBehaviour, ICollisionDetection<Vector3,LayerMask> {
     //DEBUG
     [SerializeField]
     bool debug = true;
@@ -44,7 +44,7 @@ public class TVCollisionDetection2D : MonoBehaviour {
     }
 
     //metodo che ricevendo il vettore "velocity" e la maschera di collisione rileva le collisioni sull'asse verticale ed in caso di collisione "ferma" l'oggetto
-    public void VerticalCollisions(ref Vector3 velocity, LayerMask collisionMask) {
+    public void VerticalCollision(ref Vector3 velocity, LayerMask collisionMask) {
         
 		float directionY = Mathf.Sign (velocity.y);
 		float rayLenght = Mathf.Abs (velocity.y) + skinWidth;
@@ -70,7 +70,7 @@ public class TVCollisionDetection2D : MonoBehaviour {
     }
 
     //metodo che ricevendo il vettore "velocity" e la maschera di collisione rileva le collisioni sull'asse orizzontale ed in caso di collisione "ferma" l'oggetto
-    public void HorizontalCollisions(ref Vector3 velocity, LayerMask collisionMask) {
+    public void HorizontalCollision(ref Vector3 velocity, LayerMask collisionMask) {
 
         float directionX = Mathf.Sign(velocity.x);
         float rayLenght = Mathf.Abs(velocity.x) + skinWidth;

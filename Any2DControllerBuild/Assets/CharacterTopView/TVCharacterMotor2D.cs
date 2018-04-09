@@ -5,7 +5,7 @@ using UnityEngine;
 *Copyright(c) 
 *Davide "Lautz" Lauterio
 */
-public class TVCharacterMotor2D : MonoBehaviour {
+public class TVCharacterMotor2D : MonoBehaviour, IMoveable<Vector3,LayerMask> {
 
     //maniglia del component
     TVCollisionDetection2D cd;
@@ -23,13 +23,13 @@ public class TVCharacterMotor2D : MonoBehaviour {
         if (velocity.y != 0)
         {
             //se voglio muovermi sull'asse verticale controllo le collisioni
-            cd.VerticalCollisions(ref velocity, collisionMask);
+            cd.VerticalCollision(ref velocity, collisionMask);
         }
 
         if (velocity.x != 0)
         {
             //se voglio muovermi sull'asse orizzontale controllo le collisioni
-            cd.HorizontalCollisions(ref velocity, collisionMask);
+            cd.HorizontalCollision(ref velocity, collisionMask);
         }
 
         //con le velocity aggiornate eseguo il movimento se possibile

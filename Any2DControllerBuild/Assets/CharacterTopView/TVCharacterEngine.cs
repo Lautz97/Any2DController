@@ -5,8 +5,7 @@ using UnityEngine;
 *Copyright(c) 
 *Davide "Lautz" Lauterio
 */
-public class TVCharacterEngine : MonoBehaviour
-{
+public class TVCharacterEngine : MonoBehaviour {
 
     Vector3 velocity;
     
@@ -36,5 +35,5 @@ public class TVCharacterEngine : MonoBehaviour
         velocity.y = input.Input2DTop().y * stepSpeed;
         motor.Move(velocity * Time.deltaTime, collisionMask);
     }
-
+    
 }
